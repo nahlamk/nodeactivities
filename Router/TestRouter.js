@@ -1,0 +1,35 @@
+const express=require("express")
+const hello = require("../Controller/TestController")
+const array = require("../Controller/ArrayController")
+const demo = require("../Controller/Newcontroller1")
+const text = require("../Controller/New2")
+const object = require("../Controller/ObjectController")
+const sample = require("../Controller/Sample")
+const newarray = require("../Controller/NewArray1")
+const newarray2 = require("../Controller/NewArray2")
+const samplearray = require("../Controller/SampleArray")
+const demo1 = require("../Controller/Demo1")
+const newarray3 = require("../Controller/NewArray3")
+const samplearray2 = require("../Controller/SampleArray2")
+
+const router=express.Router() 
+    router.route("/").get(hello)
+    router.route("/new").get(array)
+    router.route("/demo").get(demo)
+    router.route("/txt").get(text)
+    router.route("/OBJ").get(object)
+    router.route("/s").get(sample)
+
+    router.route("/age/:age").get(newarray)
+    router.route("/salary/:salary").get(newarray2)
+    router.route("/id/:id").get(newarray2)
+    router.route("/name/:name").get(newarray2)
+    router.route("/sample").get(samplearray)
+    router.route("/demo1").get(demo1)
+    router.route("/place/:place").get(newarray3)
+    router.route("/quali/:qualification").get(newarray3)
+    router.route("/SA").get(samplearray2)
+
+
+
+module.exports=router
